@@ -7,11 +7,11 @@
   <body>
     {%block content%}
     <div class="row">
-      <div class="col-lg-2"></div>
-      <div class="col-lg-10">
+      <div class="col-lg-2 dash"></div>
+      <div class="col-lg-10 posts">
         {%for image in images%}
 
-        <div class="card">
+        <div class="card" id="post">
           <img class="card-img-top" src="{{image.image.url}}" alt="" />
           <div class="card-body">
             <p class="card-text">{{image.name}}</p>

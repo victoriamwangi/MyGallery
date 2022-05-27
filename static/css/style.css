@@ -1,3 +1,28 @@
 .navbar {
     background-color: #f73d93 !important;
 }
+
+.dash {
+    height: 100vh;
+    background-color: #f5e7ee;
+}
+
+.posts {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin: 2vw;
+}
+
+.posts #post {
+    width: 22vw;
+    height: 30vw;
+}
+
+#post img {
+    height: 28vw;
+    width: 100%;
+    object-fit: cover;
+}
