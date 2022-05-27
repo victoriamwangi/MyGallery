@@ -5,6 +5,22 @@
     <meta charset="utf-8" />
   </head>
   <body>
-    {%block content%} {%endblock%}
+    {%block content%}
+    <div class="row">
+      <div class="col-lg-2"></div>
+      <div class="col-lg-10">
+        {%for image in images%}
+
+        <div class="card">
+          <img class="card-img-top" src="{{image.image.url}}" alt="" />
+          <div class="card-body">
+            <p class="card-text">{{image.name}}</p>
+          </div>
+        </div>
+
+        {%endfor%}
+      </div>
+    </div>
+    {%endblock%}
   </body>
 </html>
