@@ -1,0 +1,5 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/moringa/Documents/Dev/Django/my-gallery'
+python3 manage.py makemigrations gallery
+make: Leaving directory '/home/moringa/Documents/Dev/Django/my-gallery'
+ 
