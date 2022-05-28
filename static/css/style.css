@@ -21,8 +21,15 @@
     height: 30vw;
 }
 
-#post img {
+#post img,
+.myImg {
     height: 28vw !important;
     width: 100%;
+    object-fit: cover;
+}
+
+.myImg {
+    height: 23vw !important;
+    width: 80%;
     object-fit: cover;
 }
