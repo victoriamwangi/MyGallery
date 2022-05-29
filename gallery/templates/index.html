@@ -15,7 +15,7 @@
         <div class="card" id="post">
           <img class="card-img-top" src="{{image.image.url}}" alt="" />
           <div class="card-body">
-            <p class="card-text">{{image.name}}</p>
+            <p>{{image.description}}</p>
             <button
               type="button"
               class="btn btn-primary"
@@ -51,8 +51,17 @@
                       alt=""
                     />
                     <p>{{image.description}}</p>
-                    <p>{{image.pub_date}}</p>
-                    <p>{{image.location}}</p>
+
+                    <p>
+                      <i class="fas fa-search-location"></i>
+
+                      {{image.location}}
+                    </p>
+                    <p>
+                      <i class="fas fa-calendar-check"></i>
+
+                      {{image.pub_date}}
+                    </p>
                   </div>
                   <div class="modal-footer">
                     <button

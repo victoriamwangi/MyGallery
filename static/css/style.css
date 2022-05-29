@@ -47,16 +47,23 @@
 
 .card {
     margin: 2vw;
+    border-radius: 8px;
+}
+
+.card .btn {
+    background-color: #570a57;
+    border: none;
+    font-size: 1.1vw !important;
 }
 
 .posts #post {
     width: 22vw;
-    height: 30vw;
+    height: 38vw;
 }
 
 #post img,
 .myImg {
-    height: 28vw !important;
+    height: 30vw !important;
     width: 100%;
     object-fit: cover;
 }
