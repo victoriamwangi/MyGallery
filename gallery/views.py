@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Image, category
+from .models import Image, category, Location
 from django.db.models import Q
 
 # Create your views here.
@@ -27,7 +27,14 @@ def categories(request):
         'categories': categories,
     }
     return render(request, 'category.html', context)    
-    
+
+def location(request):
+    location = Location.objects.all()
+
+    context = {
+        'locations': location,
+    }
+    return render(request, 'location.html', context) 
     
     
     
