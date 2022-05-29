@@ -22,7 +22,7 @@ class Image(models.Model):
     description = models.CharField(max_length= 40)
     image = models.ImageField(upload_to = 'images/', null=True, blank=True)
     pub_date = models.DateTimeField(auto_now_add=True)
-    category = models.ManyToManyField(category)
+    categoryName = models.ForeignKey(category, on_delete=models.CASCADE)
     location = models.ForeignKey(Location, on_delete=models.CASCADE)
     
     def save_image(self): 
@@ -34,6 +34,11 @@ class Image(models.Model):
     def all_images(cls): 
         images= Image.objects.all() 
         return images
+    @classmethod
+    def search_by_category(cls, search_term):
+        posts = cls.objects.filter(name__icontains=search_term)
+        return posts
+        
     def __str__(self): 
         return self.name 
      

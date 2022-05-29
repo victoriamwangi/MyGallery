@@ -29,7 +29,11 @@
 }
 
 .myImg {
-    height: 23vw !important;
+    height: 10vw !important;
     width: 80%;
     object-fit: cover;
+}
+
+.modal {
+    height: 45vw !important;
 }

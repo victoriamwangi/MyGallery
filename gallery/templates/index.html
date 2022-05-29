@@ -16,51 +16,53 @@
           <img class="card-img-top" src="{{image.image.url}}" alt="" />
           <div class="card-body">
             <p class="card-text">{{image.name}}</p>
-          </div>
-          <!-- Button trigger modal -->
-          <button
-            type="button"
-            class="btn btn-primary"
-            data-bs-toggle="modal"
-            data-bs-target="#exampleModal"
-          >
-            VIEW DETAILS
-          </button>
-
-          <!-- Modal -->
-          <div
-            class="modal fade"
-            id="exampleModal"
-            tabindex="-1"
-            aria-labelledby="exampleModalLabel"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">
-                    {{image.name}}
-                  </h5>
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                <div class="modal-body">
-                  <img
-                    class="card-img-top myImg"
-                    src="{{image.image.url}}"
-                    alt=""
-                  />
-                  <p>{{image.description}}</p>
-                  <p>{{image.pub_date}}</p>
-                  <p>{{image.location}}</p>
-                  <p>{{image.category}}</p>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-primary">CLOSE</button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              VIEW DETAILS
+            </button>
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                      {{image.name}}
+                    </h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <img
+                      class="card-img-top myImg"
+                      src="{{image.image.url}}"
+                      alt=""
+                    />
+                    <p>{{image.description}}</p>
+                    <p>{{image.pub_date}}</p>
+                    <p>{{image.location}}</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      CLOSE
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
