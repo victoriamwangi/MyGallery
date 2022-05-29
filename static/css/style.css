@@ -2,6 +2,39 @@
     background-color: #f73d93 !important;
 }
 
+.navbar-brand {
+    margin-left: 4vw;
+}
+
+#navbarSupportedContent {
+    margin-left: 20vw;
+}
+
+.nav-item {
+    margin-left: 2vw;
+    font-weight: bold;
+}
+
+.nav-item a:hover {
+    color: white !important;
+    font-size: 1.2vw;
+}
+
+.navbar input {
+    width: 11vw !important;
+}
+
+.navbar .btn-outline-success {
+    width: 5vw !important;
+    margin-right: 2vw;
+    border: solid 1px #570a57;
+    color: white !important;
+}
+
+.navbar .btn-outline-success:hover {
+    background-color: #570a57 !important;
+}
+
 .dash {
     height: 100vh;
     background-color: #f5e7ee;
