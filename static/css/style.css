@@ -45,7 +45,7 @@
     flex-wrap: wrap;
 }
 
-.card {
+.post .card {
     margin: 2vw;
     border-radius: 8px;
 }
@@ -76,4 +76,31 @@
 
 .modal {
     height: 45vw !important;
+}
+
+
+/* category  */
+
+#postcat {
+    margin: 2vw;
+    border-radius: 8px;
+}
+
+.category {
+    color: #570a57;
+    font-size: 1.2vw;
+}
+
+.category span {
+    color: #f73d93;
+}
+
+#postcat img {
+    height: 30vw !important;
+    width: 100%;
+    object-fit: cover;
+}
+
+#postcat {
+    width: 30vw !important;
 }

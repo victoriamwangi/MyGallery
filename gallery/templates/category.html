@@ -2,14 +2,77 @@
 <div class="container">
   {% for category in categories%}
   <p></p>
+  <p class="category"><span>Category:</span> {{ category.name | capfirst}}</p>
+  <div class="col-lg-10 posts">
+    {% for image in category.image_set.all %}
 
-  <h1>{{ category.name }}</h1>
-  {% for image in category.image_set.all %}
+    <div class="card" id="postcat">
+      <img class="card-img-top" src="{{image.image.url}}" alt="" />
+      <div class="card-body">
+        <p>{{image.description}}</p>
 
-  <p>{{ image.name }}</p>
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          VIEW DETAILS
+        </button>
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <img
+                  class="card-img-top myImg"
+                  src="{{image.image.url}}"
+                  alt=""
+                />
+                <p>{{image.description}}</p>
 
-  <p>{{ image.pub_date }}</p>
+                <p>
+                  <i class="fas fa-search-location"></i>
 
-  {% endfor %} {% endfor %}
+                  {{image.location}}
+                </p>
+                <p>
+                  <i class="fas fa-calendar-check"></i>
+
+                  {{image.pub_date}}
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  CLOSE
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% endfor %} 
+  </div>
+  {% endfor %}
+  </div>
+  {% endblock %}
 </div>
-{% endblock %}

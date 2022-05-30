@@ -1,6 +1,4 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-make: *** No rule to make target 'all'.  Stop.
-
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -8,7 +6,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun May 29 09:53:46 2022
+# Make data base, printed on Sun May 29 22:30:55 2022
 
 # Variables
 
@@ -123,7 +121,7 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 206383
+GIO_LAUNCHED_DESKTOP_FILE_PID = 238923
 # automatic
 %F = $(notdir $%)
 # environment
@@ -191,7 +189,7 @@ SHLVL = 0
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-381bef37-8104-4770-9dca-210889fc98f4.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-7b744e0d-281d-487b-bb4a-302930e4b1d4.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -280,7 +278,6 @@ DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=6ec32bfa006c6f0b94bbc19
 NVM_RC_VERSION = 
 # variable set hash-table stats:
 # Load=133/1024=13%, Rehash=0, Collisions=22/158=14%
- 
 
 # Pattern-specific Variable Values
 
@@ -288,15 +285,18 @@ NVM_RC_VERSION =
 
 # Directories
 
-# . (device 2053, inode 4743041): 15 files, no impossibilities.
+# . (device 2053, inode 4743041): 16 files, no impossibilities.
 
-# 15 files, no impossibilities in 1 directories.
+# 16 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
 # No implicit rules.
 
 # Files
+ 
+make: *** No rule to make target 'all'.  Stop.
+
 
 # Not a target:
 all:
@@ -340,12 +340,12 @@ migrations:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 22 / storage = 194 B / avg = 8 B
-# current buf: size = 8162 B / used = 194 B / count = 22 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 23 / storage = 206 B / avg = 8 B
+# current buf: size = 8162 B / used = 206 B / count = 23 / avg = 8 B
 
-# strcache performance: lookups = 28 / hit rate = 21%
+# strcache performance: lookups = 29 / hit rate = 20%
 # hash-table stats:
-# Load=22/8192=0%, Rehash=0, Collisions=1/28=4%
-# Finished Make data base on Sun May 29 09:53:46 2022
+# Load=23/8192=0%, Rehash=0, Collisions=1/29=3%
+# Finished Make data base on Sun May 29 22:30:55 2022
 
  
