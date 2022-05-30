@@ -45,7 +45,7 @@
     flex-wrap: wrap;
 }
 
-.post .card {
+#post {
     margin: 2vw;
     border-radius: 8px;
 }
