@@ -104,3 +104,53 @@
 #postcat {
     width: 30vw !important;
 }
+
+@media (min-width: 375px) and (max-width: 912px) {
+    .dash {
+        display: none;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 912px) {
+    .dash {
+        display: none;
+    }
+    .posts {
+        display: flex;
+        flex-direction: column;
+        margin-left: 15vw;
+    }
+    .posts #post {
+        width: 60vw;
+        height: 50vw;
+    }
+    #post img,
+    .myImg {
+        height: 35vw !important;
+        width: 100%;
+    }
+    .myImg {
+        height: 10vw !important;
+    }
+    .navbar {
+        height: 10vw;
+    }
+    .navbar-brand {
+        font-size: 3vw;
+        font-weight: 900;
+    }
+    .navbar .btn-outline-success {
+        width: 12vw !important;
+    }
+    .nav-item {
+        font-size: 3vw;
+    }
+    .card {
+        font-size: 3vw;
+    }
+    .card .btn {
+        width: 100%;
+        font-size: 2.1vw !important;
+        margin-bottom: 3vw;
+    }
+}
