@@ -132,9 +132,9 @@
     .myImg {
         height: 10vw !important;
     }
-    .navbar {
+    /* .navbar {
         height: 10vw;
-    }
+    } */
     .navbar-brand {
         font-size: 3vw;
         font-weight: 900;
@@ -152,5 +152,8 @@
         width: 100%;
         font-size: 2.1vw !important;
         margin-bottom: 3vw;
+    }
+    .category {
+        font-size: 4vw;
     }
 }
