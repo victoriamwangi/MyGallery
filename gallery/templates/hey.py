@@ -14,3 +14,19 @@ models.ForeignKey(Category,on_delete=models.CASCADE) trial =
 models.CharField(max_length=30) def save_image(self): self.save() def
 delete_image(self): self.delete() @classmethod def all_images(cls): images=
 Image.objects.all() return images def __str__(self): return self.name
+{%extends 'base.html'%} {% block content %}
+<div class="container">
+  <div class="row">
+    {% if categories%} {% for category in categories %}
+    <div class="col-sm-6 col-md-3">
+      <h1>{{category.name}}</h1>
+      <img class="card-img-top" src="{{category.image.url}}" alt="" />
+    </div>
+    {% endfor %} {% else %}
+    <h2>Found 0 posts for the search term {{message}}</h2>
+    {% endif %}
+  </div>
+
+  <div class="row"></div>
+</div>
+{% endblock %}

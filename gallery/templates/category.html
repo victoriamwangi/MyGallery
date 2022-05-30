@@ -2,7 +2,7 @@
 <div class="container">
   {% for category in categories%}
   <p></p>
-  <p class="category"><span>Category:</span> {{ category.name | capfirst}}</p>
+  <p class="category"><span>Category:</span> {{ category.cat_name | capfirst}}</p>
   <div class="col-lg-10 posts">
     {% for image in category.image_set.all %}
 

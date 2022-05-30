@@ -59,6 +59,7 @@
 .posts #post {
     width: 22vw;
     height: 38vw;
+    margin-bottom: 3vw;
 }
 
 #post img,
@@ -105,6 +106,54 @@
     width: 30vw !important;
 }
 
+.footer {
+    background-color: #f73d93;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* padding-left: 2vw;    */
+}
+
+footer .topic {
+    color: white;
+    font-weight: 900;
+}
+
+.footer .me {
+    padding-left: 3vw !important;
+}
+
+footer .contact form {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+footer .contact textarea {
+    height: 4vw;
+    width: 15vw;
+    border-radius: 5px;
+    padding-top: 1.2vw;
+    border: none;
+    right: 30vw;
+}
+
+footer .contact button {
+    border: none;
+    background-color: #570a57;
+    height: 4.1vw;
+    border-radius: 5px;
+    width: 6vw;
+    left: 20px;
+}
+
+.copy-right {
+    background-color: #f73d93;
+    text-align: center;
+    padding-bottom: 1vw;
+}
+
 @media (min-width: 375px) and (max-width: 912px) {
     .dash {
         display: none;
@@ -132,9 +181,6 @@
     .myImg {
         height: 10vw !important;
     }
-    /* .navbar {
-        height: 10vw;
-    } */
     .navbar-brand {
         font-size: 3vw;
         font-weight: 900;
