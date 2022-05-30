@@ -5,7 +5,7 @@ from django.db.models import Q
 
 # Create your views here.
 def home(request):   
-    images = Image.all_images()
+    images = Image.all_images().order_by('-pub_date')
     return render(request, 'index.html'  , {"images": images})
 def search_results(request):
 
@@ -38,10 +38,3 @@ def location(request):
     
     
     
-# def search_results(request):
-
-#     images = Image.objects.filter(
-#         Q(categoryName__name__icontains=request.GET['name']) |
-#         Q(name__icontains=request.GET['name'])
-#     )
-#     return render(request, 'search.html', { 'images': images})
