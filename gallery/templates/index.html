@@ -13,7 +13,12 @@
         {%for image in images%}
 
         <div class="card" id="post">
-          <img class="card-img-top" src="{{image.image.url}}" alt="" />
+          <img
+            class="card-img-top"
+            data-bs-toggle="modal"
+            src="{{image.image.url}}"
+            alt=""
+          />
           <div class="card-body">
             <p>{{image.description}}</p>
 
@@ -21,61 +26,63 @@
               type="button"
               class="btn btn-primary"
               data-bs-toggle="modal"
+              data-bs-target="#myModal{{image.id}}"
               data-bs-target="#exampleModal"
             >
               VIEW DETAILS
             </button>
-            <div
-              class="modal fade"
-              id="exampleModal"
-              tabindex="-1"
-              aria-labelledby="exampleModalLabel"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                  <div class="modal-body">
-                    <img
-                      class="card-img-top myImg"
-                      src="{{image.image.url}}"
-                      alt=""
-                    />
-                    <p>{{image.description}}</p>
+          </div>
+        </div>
+        {%endfor%} {%for image in images%}
 
-                    <p>
-                      <i class="fas fa-search-location"></i>
+        <div
+          class="modal fade"
+          tabindex="-1"
+          id="myModal{{image.id}}"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <img
+                  class="card-img-top myImg"
+                  src="{{image.image.url}}"
+                  alt=""
+                />
+                <p>{{image.description}}</p>
 
-                      {{image.location}}
-                    </p>
-                    <p>
-                      <i class="fas fa-calendar-check"></i>
+                <p>
+                  <i class="fas fa-search-location"></i>
 
-                      {{image.pub_date}}
-                    </p>
-                  </div>
-                  <div class="modal-footer">
-                    <button
-                      type="button"
-                      class="btn btn-secondary"
-                      data-bs-dismiss="modal"
-                    >
-                      CLOSE
-                    </button>
-                  </div>
-                </div>
+                  {{image.location}}
+                </p>
+                <p>
+                  <i class="fas fa-calendar-check"></i>
+
+                  {{image.pub_date}}
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  CLOSE
+                </button>
               </div>
             </div>
           </div>
         </div>
-
         {%endfor%}
       </div>
     </div>
