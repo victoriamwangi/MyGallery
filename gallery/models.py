@@ -27,6 +27,15 @@ class Image(models.Model):
 
     def __str__(self): 
         return self.name 
+    @classmethod
+    def update_image(cls,current_img,new_img):
+        updated_img = Image.objects.filter(image_name=current_img).update(name=new_img)
+        return updated_img
+
+    @classmethod
+    def filter_by_location(cls,location):
+        filtered_img = cls.objects.filter(location__location_name__icontains=location)
+        return filtered_img
      
 class Location(models.Model):
     location_name = models.CharField(max_length=20) 
