@@ -148,6 +148,22 @@ footer .contact button {
     left: 20px;
 }
 
+.social ul {
+    display: flex;
+}
+
+.social ul li {
+    list-style: none;
+    color: #570a57 important;
+    padding-left: 1.4vw;
+}
+
+.social ul li i,
+svg {
+    color: #570a57 !important;
+    font-size: 1.4vw !important;
+}
+
 .copy-right {
     background-color: #f73d93;
     text-align: center;
