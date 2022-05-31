@@ -1,94 +1,103 @@
 {%extends 'base.html'%} {% block content %}
-<div class="container">
-  {% for location in locations%}
-  <p></p>
-  <p class="category">
-    <span>Location:</span> {{ location.location_name | capfirst}}
-  </p>
-  <div class="col-lg-10 posts">
-    {% for image in location.image_set.all %}
+<div class="row">
+  <div class="col-lg-1 dash"></div>
+  <div class="col-lg-10 col-md-4 col-sm-12 posts">
+    {% for location in locations%}
 
-    <div class="card" id="postcat">
-      <img class="card-img-top" src="{{image.image.url}}" alt="" />
-      <div class="card-body">
-        <p>{{image.description}}</p>
-        <button
-          type="button"
-          class="btn btn-primary"
-          data-bs-toggle="modal"
-          data-bs-target="#myModal{{image.id}}"
-          data-bs-target="#exampleModal"
-        >
-          VIEW DETAILS
-        </button>
+    <p class="category">
+      <span>Location:</span> {{ location.location_name | capfirst}}
+    </p>
+    <div class="col-lg-10 posts">
+      {% for image in location.image_set.all %}
+
+      <div class="card" id="postcat">
+        <img class="card-img-top" src="{{image.image.url}}" alt="" />
+        <div class="card-body">
+          <p>{{image.description}}</p>
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#myModal{{image.id}}"
+            data-bs-target="#exampleModal"
+          >
+            VIEW DETAILS
+          </button>
+        </div>
       </div>
-    </div>
-    {% endfor %} {% for image in location.image_set.all %}
+      {% endfor %} {% for image in location.image_set.all %}
 
-    <div
-      class="modal fade"
-      id="myModal{{image.id}}"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <img class="card-img-top myImg" src="{{image.image.url}}" alt="" />
-            <p>{{image.description}}</p>
+      <div
+        class="modal fade"
+        id="myModal{{image.id}}"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <img
+                class="card-img-top myImg"
+                src="{{image.image.url}}"
+                alt=""
+              />
+              <p>{{image.description}}</p>
 
-            <p>
-              <i class="fas fa-search-location"></i>
+              <p>
+                <i class="fas fa-search-location"></i>
 
-              {{image.location}}
-            </p>
-            <p>
-              <i class="fas fa-calendar-check"></i>
+                {{image.location}}
+              </p>
+              <p>
+                <i class="fas fa-calendar-check"></i>
 
-              {{image.pub_date}}
-            </p>
-            <a
-              name=""
-              id="copyUrl"
-              onclick="copyUrl(event)"
-              class="btn btn-primary"
-              href="https://vicsgallery.herokuapp.com{{image.image.url}}"
-              role="button"
-              >Save Image</a
-            >
-            <a
-              class=""
-              data-toggle="tooltip"
-              data-placement="top"
-              title="Copy profile Link"
-              onclick="copy_to_clipboard('<%=public_profile_url(user.public_id)%>')"
-            >
-              <i class="fa fa-copy"></i
-            ></a>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              CLOSE
-            </button>
+                {{image.pub_date}}
+              </p>
+              <a
+                name=""
+                id="copyUrl"
+                onclick="copyUrl(event)"
+                class="btn btn-primary"
+                href="https://vicsgallery.herokuapp.com{{image.image.url}}"
+                role="button"
+                >Save Image</a
+              >
+              <a
+                class=""
+                data-toggle="tooltip"
+                data-placement="top"
+                title="Copy profile Link"
+                onclick="copy_to_clipboard('<%=public_profile_url(user.public_id)%>')"
+              >
+                <i class="fa fa-copy"></i
+              ></a>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                CLOSE
+              </button>
+            </div>
           </div>
         </div>
       </div>
+      {% endfor %}
     </div>
     {% endfor %}
   </div>
-  {% endfor %}
+  <div class="col-lg-1 dash"></div>
+
+  {% endblock %}
 </div>
-{% endblock %}
